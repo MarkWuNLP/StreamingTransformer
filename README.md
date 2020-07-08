@@ -1,7 +1,7 @@
 # Streaming Transformer
 **This repo contains the streaming Transformer of our work ``On the Comparison of Popular End-to-End Models for Large Scale Speech Recognition``, which is based on ESPnet0.6.0. The streaming Transformer includes a streaming encoder, either chunk-based or look-ahead based, and a trigger-attention based decoder.**
 
-We will release following models and show reproducible results on Librispeech
+We released following models and show reproducible results on Librispeech
 
 *  Streaming_transformer-chunk32 with ESPnet Conv2d Encoder. (https://drive.google.com/file/d/1LSBY_vK50Jxvw_GeiYrPwRtJ0DsKU6zL/view?usp=sharing)
 
@@ -10,6 +10,9 @@ We will release following models and show reproducible results on Librispeech
 *  Streaming_transformer-lookahead with ESPnet Conv2d Encoder. (https://drive.google.com/file/d/1YJQaofzsk9_KsL2W9Zb42sGLRRIKRs9X/view?usp=sharing)
 
 *  Streaming_transformer-lookahead with VGG Encoder. (https://drive.google.com/file/d/1LO_0pPxU5XJffqJMgtx4W4IL-Aih5m0M/view?usp=sharing)
+
+In the future, our plan is to release more Transformer related models for streaming ASR, such as Transformer-Transducer model.
+
 
 ## Results on Librispeech (beam=10)
 | Model        | test-clean   |  test-other  |latency  |size  |
@@ -64,3 +67,10 @@ Execute the following script with to decoding on test_clean and test_other sets
 ### Offline Transformer Reference
 Regarding the offline Transformer model, Please visit [here](https://github.com/MarkWuNLP/SemanticMask)
 
+
+
+## Results on Librispeech (beam=10)
+| Model        | test-clean   |  test-other  |latency  |size  |
+| --------   | -----:  | :----:  |:----:  |:----:  |
+| Offline Transformer (base model)     | 2.24   |   5.12  | inf  | 78M |
+| Offline Transformer (large model)    | 2.08   |   4.95 | inf  | 140M |
